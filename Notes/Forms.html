@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        h1 {
+            line-height: 0;
+        }
+
+        #Subject {
+            color: slategray;
+        }
+
+        .sname {
+            font-weight: lighter;
+            margin: 5px;
+        }
+
+        form {
+            align-items: center;
+        }
+
+        .head {
+            line-height: 2.5;
+            border-color: thistle;
+        }
+
+        .body {
+            border-color: thistle;
+            line-height: 2.5;
+        }
+
+        .foot {
+            border-color: thistle;
+            line-height: 10;
+        }
+
+        h4 {
+            line-height: 0;
+            font-weight: lighter;
+            color: slategray;
+        }
+
+        .date-gender {
+            display: flex;
+        }
+
+        .date-gender>div {
+            margin: 5px;
+        }
+
+        .flex-name {
+            display: flex;
+        }
+
+        .flex-name>div {
+            margin: 5px;
+            justify-content: space-between;
+        }
+
+        .name {
+            color: slategray;
+        }
+
+        .email-number {
+            display: flex;
+        }
+
+        .email-number>div {
+            margin: 5px;
+            justify-content: space-between;
+        }
+
+        .number {
+            display: flex;
+        }
+
+        .number>div {
+            margin: 5px;
+            justify-content: space-between;
+        }
+
+        .address2 {
+            display: flex;
+        }
+
+        .address2>div {
+            margin: 5px;
+            justify-content: space-between;
+        }
+
+        .address1 {
+            margin: 5px;
+        }
+
+        .city-state {
+            display: flex;
+        }
+
+        .city-state>div {
+            margin: 5px;
+            justify-content: space-between;
+        }
+
+        .postal {
+            margin: 5px;
+        }
+
+        .address {
+            margin: 5px;
+        }
+
+        .company {
+            margin-left: 5px;
+        }
+
+        .course {
+            margin-left: 5px;
+        }
+
+        .comment {
+            margin-left: 5px;
+        }
+
+        input {
+            border-radius: 20px;
+        }
+        .hover:hover{
+            color:chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+        <h1>Registration Form</h1>
+        <h3 id="Subject">Fill out the form carefully for registration</h3></div><br>
+
+        <div class="sname">
+            <label>
+                <h3 class="hover">Student Name</h3>
+            </label>
+        </div>
+        <div class="flex-name">
+            <div><input class="head" type="text" id="name" name="fname" required maxlength="20" size="29"><br>
+                <h4 class="hover">First Name</h4>
+            </div>
+            <div><input class="head" type="text" id="name" name="mname" required maxlength="20" size="29"><br>
+                <h4 class="hover">Middle Name</h4>
+            </div>
+            <div><input class="head" type="text" id="name" name="lname" required maxlength="20" size="29"><br>
+                <h4 class="hover">Last Name</h4>
+            </div>
+        </div><br>
+        <div class="date-gender">
+            <div><label for="date">
+                    <h3 class="hover">Birth date</h3>
+                </label>
+                <select name="month" id="date">
+
+                </select>
+                <select name="day" id="date">
+
+                </select>
+                <select name="year" id="date">
+
+                </select>
+            </div>
+            <div>
+                <label for="gender">
+                    <h3 class="hover">Gender</h3>
+                </label>
+                <select name="gender" id="gender">
+                    <div class="gender">
+                        <option value="none">Please Select</option>
+                    </div>
+                    <option class="hover" value="one">Male</option>
+                    <option class="hover" value="two">Female</option>
+                    <option class="hover" value="three">Others</option>
+                    <option class="hover" value="four">Prefer not to say</option>
+                </select>
+            </div>
+        </div><br><br>
+        <div class="address">
+            <label style="line-height: 0;" for="address">
+                <h3 class="hover">Address</h3>
+            </label>
+        </div>
+        <div class="address1">
+            <input class="head" type="text" id="address" name="address" required maxlength="100" size="101"><br>
+            <h4 class="hover">Street Address</h4>
+        </div><br>
+
+        <div class="address1">
+            <input class="head" type="text" id="street" name="street" size="101"><br>
+            <h4 class="hover">Street Address Line 2</h4>
+        </div><br>
+
+        <div class="city-state">
+            <div><input class="head" type="text" id="city" name="city" size="47"><br>
+                <h4 class="hover">City</h4>
+            </div>
+            <div style="margin-left: 15px;"><input class="head" type="text" id="state" name="state" size="46"><br>
+                <h4 class="hover">State / Province</h4>
+            </div>
+
+        </div><br>
+        <div class="postal"><input class="head" type="text" id="postal" name="postal" size="101"><br>
+            <h4 class="hover">Postal / Zip Code</h4>
+        </div><br>
+        <div class="email-number">
+            <div><label for="email">
+                    <h3 class="hover">Student E-mail</h3>
+                </label>
+                <input class="body" type="text" id="email" name="email" placeholder="ex:myname@example.com"
+                    maxlength="50" size="47">
+            </div>
+            <div style="margin-left: 15px;"><label for="mnum">
+                    <h3 class="hover">Mobile Number</h3>
+                </label>
+                <input class="body" type="text" name="mnum" id="mnum" placeholder="(000) 000-0000" maxlength="10"
+                    size="46">
+            </div>
+        </div><br>
+        <div class="number">
+            <div><label for="pno">
+                    <h3 class="hover">Phone Number</h3>
+                </label>
+                <input class="body" type="text" name="pno" id="pno" placeholder="(000) 000-0000" size="47"
+                    maxlength="10">
+            </div>
+            <div style="margin-left: 15px;"><label for="wno">
+                    <h3 class="hover">Work Number</h3>
+                </label>
+                <input class="body" type="text" name="wno" id="wno" placeholder="(000) 000-0000" size="46"
+                    maxlength="10">
+            </div>
+        </div><br>
+        <div class="company">
+            <label for="company">
+                <h3 class="hover">Company</h3>
+            </label>
+            <input class="body" type="text" name="company" id="company" size="47">
+        </div><br>
+        <div class="course">
+            <label for="courses">
+                <h3 class="hover">Courses</h3>
+            </label>
+            <select style="line-height: 2.5; border-color:thistle;" name="courses" id="courses">
+                <option value="one">Please Select</option>
+                <option value="two">CSE</option>
+                <option value="three">IT</option>
+                <option value="four">AI</option>
+            </select>
+        </div><br>
+        <div class="comment">
+            <label for="comment">
+                <h3 class="hover">Additional Comments</h3>
+            </label>
+            <input class="foot" type="text" name="comment" id="comment" required maxlength="100" size="102">
+        </div>
+
+    </form>
+</body>
+
+</html>
